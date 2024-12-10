@@ -1,9 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { RiFacebookFill } from "react-icons/ri";
-import { FaInstagram } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io5";
-import { IoLogoTwitter } from "react-icons/io";
 
 const Style = () => {
   return (
