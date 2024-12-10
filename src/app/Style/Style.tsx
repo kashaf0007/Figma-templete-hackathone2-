@@ -1,4 +1,8 @@
 import React from "react";
+import { RiFacebookFill } from "react-icons/ri";
+import { FaInstagram } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io5";
+import { IoLogoTwitter } from "react-icons/io";
 import Image from "next/image";
 
 const Style = () => {
