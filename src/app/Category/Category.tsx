@@ -249,6 +249,8 @@ Sign up and get 20% off to your first order.
         
   </div>
   </div>
+
+  
   <div className="bg-black items-center ">
             <img src="footer-bar.png" alt="footerbar"/>
             </div>
@@ -335,8 +337,6 @@ Sign up and get 20% off to your first order.
           <Image src={"/Badge (2).jpg"} alt={"Paypal.jpg"} height={30} width={20} />
         </div>
       </div>
-  
-  
   
   
 </header>
