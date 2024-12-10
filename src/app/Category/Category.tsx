@@ -325,8 +325,7 @@ Sign up and get 20% off to your first order.
 
         {/* Divider */}
         <div className="border-t border-[#0000001A] mt-0 mb-4"></div>
-
-        {/* Footer Bottom Section */}
+{/* footer */}
         <div className="flex justify-between items-center ">
           <div className="font-satoshi text-sm text-[#00000099]">Shop.co © 2000-2023, All Rights Reserved</div>
           <Image src={"/Badge (3).jpg"} alt={"Paypal.jpg"} height={30} width={20} />

@@ -384,8 +384,7 @@ Sign up and get 20% off to your first order.
 
     
 
-
-           {/* <form className=''> */}
+{/* form */}
             <div className="flex items-center border-b border-gray-200">
              <img src='Frame 3.png'></img>
              

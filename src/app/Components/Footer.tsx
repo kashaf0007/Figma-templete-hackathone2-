@@ -8,8 +8,8 @@ import { IoLogoTwitter } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <>
-     
+    
+     <>
       <div className="bg-black items-center ">
             <img src="footer-bar.png" alt="footerbar"/>
             </div>

@@ -21,7 +21,7 @@ const Style = () => {
         <div className="col-span-1">
           <div className="w-[400px] h-[289px] relative ml-14">
             <Image
-              src="/casual.jpg" // Replace with your image path
+              src="/casual.jpg" 
               alt="Dress Style 1"
               layout="fill"
               objectFit="cover"
@@ -34,7 +34,7 @@ const Style = () => {
         <div className="col-span-3 ">
           <div className="w-[500px] h-[289px] relative ml-40 gap-4">
             <Image
-              src="/Formal.jpg" // Replace with your image path
+              src="/Formal.jpg" 
               alt="Dress Style 2"
               layout="fill"
               objectFit="cover"
@@ -47,7 +47,7 @@ const Style = () => {
         <div className="col-span-1">
           <div className="w-[400px] h-[289px] relative ml-14">
             <Image
-              src="/Party.jpg" // Replace with your image path
+              src="/Party.jpg"
               alt="Dress Style 3"
               layout="fill"
               objectFit="cover"
@@ -60,7 +60,7 @@ const Style = () => {
         <div className="col-span-3">
           <div className="w-[500px] h-[289px] relative ml-40">
             <Image
-              src="/gym.jpg" // Replace with your image path
+              src="/gym.jpg" 
               alt="Dress Style 4"
               layout="fill"
               objectFit="cover"
@@ -68,8 +68,6 @@ const Style = () => {
             />
           </div>
         </div>
-      
-        
 
     </div>
    

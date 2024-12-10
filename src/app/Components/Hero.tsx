@@ -55,6 +55,7 @@ const Hero = () => {
           </div>
         </section>    
         <section className="relative md:px-4 min-h-[448px] md:min-h-[428px] bg-cover bg-top xl:bg-[center_top_-1.6rem] bg-no-repeat bg-[url('/images/header-res-homepage.png')] md:bg-[url('/images/header-homepage.png')]">
+       
           <Image
             // priority
             src="/vector-img.jpg"

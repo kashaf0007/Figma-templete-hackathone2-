@@ -1,6 +1,4 @@
 
-
-
 import React from 'react'
 import { RxCross2 } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
@@ -24,6 +22,7 @@ Sign up and get 20% off to your first order.
         
         </div>
         <div className='flex justify-between items-center px-8 py-4' >
+            {/* logo */}
             <h1 className='text-2xl font-extrabold bg-white text-black px-24'>
                SHOP.CO
             </h1>

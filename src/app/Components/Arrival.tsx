@@ -46,7 +46,7 @@ const Arrival = () => {
       rating: 4.7,
     },
   ];
-
+//percentage
   // Function to calculate the discount percentage
   const calculateDiscount = (price: string, priceWas: string) => {
     if (priceWas) {
