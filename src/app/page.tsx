@@ -10,8 +10,8 @@ import Cart from "../app/Cart/Cart"
 import Style from "../app/Style/Style"
 import Detail from './Components/Detail'
 
-
-const page = () => {
+// pages
+const Home = () => {
   return (
     <div>
       <Navbar/>
@@ -23,10 +23,11 @@ const page = () => {
        <Detail/>
       <Slidebar/>
       <Cart/>
+
       <Footer/>
  
     </div>
   )
 }
 
-export default page
+export default Home

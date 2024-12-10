@@ -250,7 +250,7 @@ Sign up and get 20% off to your first order.
   </div>
   </div>
 
-  
+  {/* footer */}
   <div className="bg-black items-center ">
             <img src="footer-bar.png" alt="footerbar"/>
             </div>

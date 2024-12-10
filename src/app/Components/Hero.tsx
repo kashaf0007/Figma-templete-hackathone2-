@@ -72,7 +72,7 @@ const Hero = () => {
             alt="small star"
             className="absolute left-7 md:left-0 top-36 sm:top-64 md:top-44 lg:top-56 max-w-11 max-h-11 md:max-w-14 md:max-h-14 animate-[spin_3s_infinite]"
           />
-          {/* Header image */}
+        
           <Image src="/img.png" alt="Home" width={500} height={500}  className="absolute top[-40] left-0" />
         </section>
       </div>
