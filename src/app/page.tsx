@@ -18,12 +18,10 @@ const page = () => {
       <Hero/>
       <Banner/>
       <Arrival/>
-     
        <Seller/>
        <Style/>
        <Detail/>
       <Slidebar/>
-  
       <Cart/>
       <Footer/>
  
