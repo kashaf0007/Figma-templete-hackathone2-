@@ -148,7 +148,7 @@ export default function Detail() {
           </div>
         </div>
 
-        {/* Divider */}
+
         <div className="border-t border-[#0000001A] mt-0 mb-4"></div>
 
         {/* Footer Bottom Section */}

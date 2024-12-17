@@ -9,6 +9,8 @@ import Slidebar from "./Category/Category";
 import Cart from "../app/Cart/Cart"
 import Style from "../app/Style/Style"
 import Detail from './Components/Detail'
+import Productpage from './Product/Product'
+import Product from './ProductDetail/Detail'
 
 // pages
 const Home = () => {
@@ -21,6 +23,9 @@ const Home = () => {
        <Seller/>
        <Style/>
        <Detail/>
+       <Productpage/>
+       <Product/>
+       <Footer/>
       <Slidebar/>
       <Cart/>
 

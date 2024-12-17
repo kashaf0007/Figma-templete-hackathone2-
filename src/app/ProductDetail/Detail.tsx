@@ -1,8 +1,13 @@
+
 import React from "react";
 import Image from "next/image";
 import { IoMdStar } from "react-icons/io";
 
-type ArrData = {
+
+
+
+
+type ProductData = {
   id: number;
   image: string;
   title: string;
@@ -11,39 +16,39 @@ type ArrData = {
   rating: number;
 };
 
-const Arrival = () => {
-  const card:ArrData[] = [
+const Product = () => {
+  const card: ProductData[] = [
     {
       id: 1,
-      image: "/T-shirt1.jpg",
-      title: "T-SHIRT WITH TAPE DETAILS",
-      price: "$120",
-      priceWas: "",
-      rating: 4.5,
+      image: "/Product-detail.png",
+      title: "Polo with Contrast Trims",
+      price: "$212",
+      priceWas: "$242",
+      rating: 4.0,
     },
     {
       id: 2,
-      image: "/jeans.jpg",
-      title: "SKINNY FIT JEANS",
-      price: "$240",
-      priceWas: "$260",
-      rating: 4.5,
+      image: "/Category1.png",
+      title: "Gradient Graphic T-shirt",
+      price: "$145",
+      priceWas: "",
+      rating: 3.5,
     },
     {
       id: 3,
-      image: "/checkered-shirt.jpg",
-      title: "CHECKERED SHIRT",
+      image: "/Category2.png",
+      title: "Polo with Tipping Details",
       price: "$180",
       priceWas: "",
       rating: 4.5,
     },
     {
       id: 4,
-      image: "/T-shirt2.jpg",
-      title: "SLEEVE STRIPED T-SHIRT",
-      price: "$130",
-      priceWas: "$160",
-      rating: 4.7,
+      image: "/T-shirt05.png",
+      title: "Black Striped T-shirt",
+      price: "$120",
+      priceWas: "150",
+      rating: 5.0,
     },
   ];
 
@@ -62,13 +67,13 @@ const Arrival = () => {
 
   return (
     <div>
-      {/* NEW ARRIVALS Heading */}
+     
       <div className="text-center mt-12 mb-6">
         <h1
           className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] text-center"
           style={{ textUnderlinePosition: "from-font" }}
         >
-          NEW ARRIVALS
+          YOU MIGHT ALSO LIKE
         </h1>
       </div>
 
@@ -125,15 +130,15 @@ const Arrival = () => {
           <button className="text-lg font-Satoshi font-medium text-black px-16 py-2 border-2 border-gray-200 rounded-full">
             View All
           </button>
+
+
         </div>
-     
 
-      </div>
-
-
-
-    </div>
+    
+     </div>
+        </div>
+   
   );
 };
 
-export default Arrival;
+export default Product;
