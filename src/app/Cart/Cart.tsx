@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 import { IoSearch } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { LuShoppingCart } from "react-icons/lu";
@@ -53,7 +54,7 @@ Sign up and get 20% off to your first order.
         <div className='w-358 h-389 mt-203 ml-16 r-20px border-1 p-14px gap-16 '>
         <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-5 py-6  border-b border-gray-200 group">
           <div className="w-full md:max-w-[126px]">
-            <img
+            <Image
               src="/Frame 33 (2).png"
               alt="T-shirt"
               className="mx-auto rounded-xl object-cover"
@@ -154,7 +155,7 @@ Sign up and get 20% off to your first order.
         </div>
         <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-5 py-6  border-b border-gray-200 group">
           <div className="w-full md:max-w-[126px]">
-            <img
+            <Image
               src="/Checkered-shirt.jpg"
               alt="Checkered-shirt"
               className="mx-auto rounded-xl object-cover"
