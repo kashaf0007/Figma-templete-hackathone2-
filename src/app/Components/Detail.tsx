@@ -8,7 +8,7 @@ import { IoLogoTwitter } from "react-icons/io";
 
 
 export default function Detail() {
-  // Dummy data for cards
+
   const CustomerData = [
     {
       text: "Sarah M.",
@@ -67,7 +67,7 @@ export default function Detail() {
         </div>
       </div>
 
-      {/* Dynamic Cards */}
+ 
    
      
        
@@ -78,6 +78,7 @@ export default function Detail() {
           </div>
           <div className="bg-black items-center ">
             <img src="footer-bar.png" alt="footerbar" className="w-full"/>
+
             </div>
 
 
