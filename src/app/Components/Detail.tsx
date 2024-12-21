@@ -1,4 +1,4 @@
-import Cart from "../Cart/Cart"
+
 import { GoDotFill } from "react-icons/go";
 import Image from "next/image";
 import { RiFacebookFill } from "react-icons/ri";

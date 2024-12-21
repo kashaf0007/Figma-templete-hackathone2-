@@ -1,6 +1,5 @@
 import React from 'react'
 import { IoSearch } from "react-icons/io5";
-import Image from 'next/image'
 import { RxCross2 } from "react-icons/rx";
 import { LuShoppingCart } from "react-icons/lu";
 import { IoPersonCircleOutline } from "react-icons/io5";
@@ -384,7 +383,7 @@ Sign up and get 20% off to your first order.
 
     
 
-{/* form */}
+
             <div className="flex items-center border-b border-gray-200">
              <img src='Frame 3.png'></img>
              
@@ -397,7 +396,7 @@ Sign up and get 20% off to your first order.
             
             
 
-          {/* </form> */}
+      
           </div>
           </div>
           </div>
