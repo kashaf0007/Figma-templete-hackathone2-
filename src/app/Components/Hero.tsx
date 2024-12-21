@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import HeroImage from '../../../public/img.jpg' 
+
 const Hero = () => {
   return (
     <header className="bg-[#F2F0F1] pt-10 md:pt-24 overflow-hidden">
