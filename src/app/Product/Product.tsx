@@ -34,13 +34,13 @@ Sign up and get 20% off to your first order.
                SHOP.CO
             </h1>
             <nav className='hidden md:flex space-x-8 py-3  items-center'>
-                <a href='#' className='text-gray-900 hover:text-black float-start underline'>Shop</a>
+                <a href='#category' className='text-gray-900 hover:text-black float-start underline'>Shop</a>
                 <div className='text-black text-xl '>
                 <IoIosArrowDown />
                 </div>
-                <a href='#' className='text-gray-900 hover:text-black float-start'>On Sale </a>
-                <a href='#' className='text-gray-900 hover:text-black float-start'>New Arrivals</a>
-                <a href='#' className='text-gray-900 hover:text-black float-start'>Brands</a>
+                <a href='#cart' className='text-gray-900 hover:text-black float-start'>On Sale </a>
+                <a href='#arrival' className='text-gray-900 hover:text-black float-start'>New Arrivals</a>
+                <a href='#brand' className='text-gray-900 hover:text-black float-start'>Brands</a>
 
             </nav>
             <div className='flex items-center space-x-6'>
@@ -159,11 +159,11 @@ Sign up and get 20% off to your first order.
          <div>
           </div>
           <div className="flex items-center">
-                  <FaStar className="text-yellow-500 mb-52 " />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
+                  <FaStar className="text-yellow-500 mb-4 " />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
                 </div>
 
           <div className="flex-grow">
@@ -183,11 +183,11 @@ Sign up and get 20% off to your first order.
       <div className="p-4 lg:w-1/2 md:w-full">
         <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
         <div className="flex items-center">
-                  <FaStar className="text-yellow-500 mb-52 " />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
+                  <FaStar className="text-yellow-500 mb-4 " />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
                 </div>
           <div className="flex-grow">
             <h2 className="text-gray-900 text-lg title-font  mb-3 font-bold flex">
@@ -195,7 +195,7 @@ Sign up and get 20% off to your first order.
               <div className='w-[25px] h-[25px] bg-[#54d152] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity '/></div>
             </h2>
             <p className="leading-relaxed text-base">
-            "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."
+            "The T-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."
             </p>
             <a className="mt-3 inline-flex items-center">
               Posted on August 15,2023
@@ -218,17 +218,16 @@ Sign up and get 20% off to your first order.
          <div>
           </div>
           <div className="flex items-center">
-                  <FaStar className="text-yellow-500 mb-52 " />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
+                  <FaStar className="text-yellow-500 mb-4 " />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
                 </div>
           <div className="flex-grow">
             <h2 className="text-gray-900 text-lg title-font  mb-3 font-bold flex">
               Ethan R.
               <div className='w-[25px] h-[25px] bg-[#54d152] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity '/></div>
-   
             </h2>
             <p className="leading-relaxed text-base">
             "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."
@@ -242,11 +241,11 @@ Sign up and get 20% off to your first order.
       <div className="p-4 lg:w-1/2 md:w-full">
         <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
         <div className="flex items-center">
-                  <FaStar className="text-yellow-500 mb-52 " />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
+                  <FaStar className="text-yellow-500 mb-4 " />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
                 </div>
           <div className="flex-grow">
             <h2 className="text-gray-900 text-lg title-font font-bold  mb-3 flex">
@@ -276,11 +275,11 @@ Sign up and get 20% off to your first order.
          <div>
           </div>
           <div className="flex items-center">
-                  <FaStar className="text-yellow-500 mb-52 " />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
+                  <FaStar className="text-yellow-500 mb-4 " />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
+                  <FaStar className="text-yellow-500 mb-4" />
                 </div>
           <div className="flex-grow">
             <h2 className="text-gray-900 text-lg title-font  mb-2 font-bold flex">
@@ -299,11 +298,11 @@ Sign up and get 20% off to your first order.
       <div className="p-4 lg:w-1/2 md:w-full">
         <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
         <div className="flex items-center">
-                  <FaStar className="text-yellow-500 mb-52 " />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
-                  <FaStar className="text-yellow-500 mb-52" />
+                  <FaStar className="text-yellow-500 sm:mb-4 " />
+                  <FaStar className="text-yellow-500 sm:mb-4 " />
+                  <FaStar className="text-yellow-500 sm:mb-4" />
+                  <FaStar className="text-yellow-500 sm:mb-4" />
+                  <FaStar className="text-yellow-500 sm;mb-4" />
                 </div>
           <div className="flex-grow">
             <h2 className="text-gray-900  font-bold text-lg title-font  mb-3 flex">

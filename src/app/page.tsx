@@ -12,7 +12,7 @@ import Detail from './Components/Detail'
 import Productpage from './Product/Product'
 import Product from './ProductDetail/Detail'
 
-// pages
+
 const Home = () => {
   return (
     <div>

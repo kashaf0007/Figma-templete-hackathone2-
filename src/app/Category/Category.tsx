@@ -9,18 +9,19 @@ import { IoSearch } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import React from "react";
+import { FaChevronDown } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io";
+import { IoMdArrowRoundForward } from "react-icons/io";
+import { IoArrowBack } from "react-icons/io5";
 import { RiFacebookFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io5";
-import { RiDeleteBin6Fill } from "react-icons/ri";
 
-
-export default function Sidebar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true); 
+export default function Sidebar() { 
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
 
   return (
-
+<div id="category">
     <header className='bg-white shadow-sm border-b mx-auto flex flex-col w-1440px'>
     <div className='bg-black text-white py-2  text-sm flex justify-between items-center px-8 w-full'>
         <div className='text-center flex-1 '>
@@ -49,19 +50,19 @@ Sign up and get 20% off to your first order.
                SHOP.CO
             </h1>
             <nav className='hidden md:flex space-x-8 py-3  items-center'>
-                <a href='#' className='text-gray-900 hover:text-black float-start underline'>Shop</a>
+                <a href='#category' className='text-gray-900 hover:text-black float-start underline'>Shop</a>
                 <div className='text-black text-xl '>
                 <IoIosArrowDown />
                 </div>
-                <a href='#' className='text-gray-900 hover:text-black float-start'>On Sale </a>
-                <a href='#' className='text-gray-900 hover:text-black float-start'>New Arrivals</a>
-                <a href='#' className='text-gray-900 hover:text-black float-start'>Brands</a>
+                <a href='#cart' className='text-gray-900 hover:text-black float-start'>On Sale </a>
+                <a href='#arrival' className='text-gray-900 hover:text-black float-start'>New Arrivals</a>
+                <a href='#brand' className='text-gray-900 hover:text-black float-start'>Brands</a>
 
             </nav>
             </div>
     <div className='mb-[100px] mt-[100px]'>
         
-      <div className="text-center mb-10">
+      <div className="text-center mb-10 font-bold">
         <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight lg:text-3xl text-black">
           ENJOY WITH THE SHOPPING
         </h1>
@@ -188,12 +189,14 @@ Sign up and get 20% off to your first order.
           <span className="text-sm font-normal text-gray-400">
             Show 1-10 of 100 Products Short By : <span className="text-black font-semibold">Most Popular</span>
           </span>
+          <FaChevronDown />
         </h1>
-
+      
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {/* Category */}
           {[...Array(9)].map((_, index) => (
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+             
               <Link href="/Category">
                 <Image 
                  
@@ -224,8 +227,11 @@ Sign up and get 20% off to your first order.
 
         {/* Pagination */}
         <div className="flex justify-between items-center mt-6">
-          <button className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-300 hover:text-black transition duration-300">
+
+          <button className="px-4 py-2 bg-[#F2F0F1] text-black rounded-lg hover:bg-gray-300 hover:text-black transition duration-300 flex ">
+          <IoArrowBack className="mt-1"/>
             Previous
+
           </button>
 
           <div className="flex space-x-2">
@@ -241,8 +247,9 @@ Sign up and get 20% off to your first order.
           </div>
 
 
-          <button className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-300 hover:text-black transition duration-300">
+          <button className="px-4 py-2 bg-[#F2F0F1] text-black rounded-lg hover:bg-gray-300 hover:text-black transition duration-300 flex mt-4">
             Next
+            <IoMdArrowRoundForward className="mt-1 gap-3"/>
           </button>
           </div>
         </div>
@@ -339,7 +346,7 @@ Sign up and get 20% off to your first order.
   
   
 </header>
-   
+</div>
    
    
   );

@@ -8,10 +8,11 @@ const Hero = () => {
       <div className="md:max-w-frame mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
 
         <section className="max-w-frame px-4 ">
+        
           <h2 className= "text-5xl lg:text-[50px] lg:leading-[50px] mb-5 lg:mb-8 pl-8 font-extrabold">
             FIND CLOTHES THAT MATCHES YOUR STYLE
           </h2>
-        
+          
           <p className="text-black/60 text-sm lg:text-base mb-6 lg:mb-8 max-w-[545px] font-semibold pl-8">
             Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
           </p>
@@ -70,7 +71,7 @@ const Hero = () => {
             className="absolute left-7 md:left-0 top-36 sm:top-64 md:top-44 lg:top-56 max-w-11 max-h-11 md:max-w-14 md:max-h-14 animate-[spin_3s_infinite]"
           />
         
-          <Image src="/img.jpg" alt="Hero" width={500} height={1100}  className="absolute top[-40] left-16" />
+          <Image src="/img.jpg" alt="Hero" width={700} height={1800}  className="absolute top[-40] left-16 " />
         </section>
       </div>
     </header>

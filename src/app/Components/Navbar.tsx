@@ -11,7 +11,7 @@ const Navbar = () => {
    <header className='bg-white shadow-sm border-b mx-auto flex flex-col w-1440px'>
     <div className='bg-black text-white py-2  text-sm flex justify-between items-center px-8 w-full'>
         <div className='text-center flex-1 '>
-Sign up and get 20% off to your first order.
+    Sign up and get 20% off to your first order.
 <a href='#' className='underline hover-text-slate-300' > Sign Up Now </a>
     </div>
     
@@ -27,13 +27,13 @@ Sign up and get 20% off to your first order.
                SHOP.CO
             </h1>
             <nav className='hidden md:flex space-x-8 py-3  items-center'>
-                <a href='#' className='text-gray-900 hover:text-black float-start underline'>Shop</a>
+                <a href="#category" className='text-gray-900 hover:text-black float-start underline'>Shop</a>
                 <div className='text-black text-xl '>
                 <IoIosArrowDown />
                 </div>
-                <a href='#' className='text-gray-900 hover:text-black float-start'>On Sale </a>
-                <a href='#' className='text-gray-900 hover:text-black float-start'>New Arrivals</a>
-                <a href='#' className='text-gray-900 hover:text-black float-start'>Brands</a>
+                <a href="#cart"className='text-gray-900 hover:text-black float-start'>On Sale </a>
+                <a href="#arrival"  className='text-gray-900 hover:text-black float-start'>New Arrivals</a>
+                <a href='#brand' className='text-gray-900 hover:text-black float-start'>Brands</a>
 
             </nav>
             <div className='flex items-center space-x-6'>
@@ -42,7 +42,7 @@ Sign up and get 20% off to your first order.
                     type="text" placeholder="What are you looking for?" className='bg-white outline-none text-sm'/>
                     <IoSearch />
                     </div>
-                    <LuShoppingCart className='text-3xl'/>
+                    <LuShoppingCart className='text-3xl '/>
                     <IoPersonCircleOutline className='text-3xl' />
                     </div>
 

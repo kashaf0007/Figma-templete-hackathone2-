@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image';
+import { IoIosArrowDown } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { LuShoppingCart } from "react-icons/lu";
@@ -8,28 +8,46 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 
 const Cart = () => {
   return (
+<div id='cart'>
+     <header className='bg-white shadow-sm border-b mx-auto flex flex-col w-1440px'>
+      <div className='bg-black text-white py-2  text-sm flex justify-between items-center px-8 w-full'>
+          <div className='text-center flex-1 '>
+      Sign up and get 20% off to your first order.
+  <a href='#' className='underline hover-text-slate-300' > Sign Up Now </a>
+      </div>
+      
+  
+          <div className='text-white text-xl '>
+          <RxCross2 />
+          </div>
+          
+          </div>
+          <div className='flex justify-between items-center px-8 py-4' >
+              {/* logo */}
+              <h1 className='text-2xl font-extrabold bg-white text-black px-24'>
+                 SHOP.CO
+              </h1>
+              <nav className='hidden md:flex space-x-8 py-3  items-center'>
+                  <a href="#category" className='text-gray-900 hover:text-black float-start underline'>Shop</a>
+                  <div className='text-black text-xl '>
+                  <IoIosArrowDown />
+                  </div>
+                  <a href="#cart"className='text-gray-900 hover:text-black float-start'>On Sale </a>
+                  <a href="#arrival"  className='text-gray-900 hover:text-black float-start'>New Arrivals</a>
+                  <a href='#brand' className='text-gray-900 hover:text-black float-start'>Brands</a>
+  
+              </nav>
+              <div className='flex items-center space-x-6'>
+                  <div className='hidden lg:flex items-center bg-slate-200 rounder-md px-3 py-2'>
+                      <input 
+                      type="text" placeholder="What are you looking for?" className='bg-white outline-none text-sm'/>
+                      <IoSearch />
+                      </div>
+                      <LuShoppingCart className='text-3xl '/>
+                      <IoPersonCircleOutline className='text-3xl' />
+                      </div>
+                      </div>
 
-    <header className='bg-white shadow-sm border-b mx-auto flex flex-col w-1440px'>
-    <div className='bg-black text-white py-2  text-sm flex justify-between items-center px-8 w-full'>
-        <div className='text-center flex-1 '>
-Sign up and get 20% off to your first order.
-<a href='#' className='underline hover-text-slate-300' > Sign Up Now </a>
-   
-
-</div>
-    <div className='flex items-center space-x-6'>
-            <div className='hidden lg:flex items-center bg-slate-200 rounder-md px-3 py-2'>
-                <input 
-                type="text" placeholder="What are you looking for?" className='bg-white outline-none text-sm'/>
-                <IoSearch />
-                </div>
-                <LuShoppingCart className='text-3xl'/>
-                <IoPersonCircleOutline className='text-3xl' />
-                </div>
-                <div className='text-white text-xl '>
-    <RxCross2 />
-    </div>
-    </div>
     <div>
       <section className=" relative z-10 after:contents-[''] after:absolute after:z-0 after:h-full xl:after:w-1/3 after:top-0 after:right-0 after:bg-gray-50">
   <div className="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto relative z-10">
@@ -54,7 +72,7 @@ Sign up and get 20% off to your first order.
         <div className='w-358 h-389 mt-203 ml-16 r-20px border-1 p-14px gap-16 '>
         <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-5 py-6  border-b border-gray-200 group">
           <div className="w-full md:max-w-[126px]">
-            <Image
+            <img
               src="/Frame 33 (2).png"
               alt="T-shirt"
               className="mx-auto rounded-xl object-cover"
@@ -63,13 +81,13 @@ Sign up and get 20% off to your first order.
           <div className="grid grid-cols-1 md:grid-cols-4 w-full">
             <div className="md:col-span-2">
               <div className="flex flex-col max-[500px]:items-center gap-3">
-                <h6 className="font-semibold text-base leading-7 text-black">
+                <h6 className="font-bold text-base leading-7 text-black">
                 Gradient Graphic T-shirt
                 </h6>
-                <h6 className="font-normal text-base leading-7 text-gray-500">
-                  <h1>Size:Large</h1>
-                  <h1>Color:White</h1>
-                </h6>
+                <h2 className="font-normal text-base leading-7 text-gray-500">
+                  <div>Size:Large</div>
+                  <div>Color:White</div>
+                </h2>
                 <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">
                   $145
                 </h6>
@@ -155,7 +173,7 @@ Sign up and get 20% off to your first order.
         </div>
         <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-5 py-6  border-b border-gray-200 group">
           <div className="w-full md:max-w-[126px]">
-            <Image
+            <img
               src="/Checkered-shirt.jpg"
               alt="Checkered-shirt"
               className="mx-auto rounded-xl object-cover"
@@ -164,13 +182,13 @@ Sign up and get 20% off to your first order.
           <div className="grid grid-cols-1 md:grid-cols-4 w-full">
             <div className="md:col-span-2">
               <div className="flex flex-col max-[500px]:items-center gap-3">
-                <h6 className="font-semibold text-base leading-7 text-black">
+                <h6 className="font-bold text-base leading-7 text-black">
                 Checkered Shirt
                 </h6>
-                <h6 className="font-normal text-base leading-7 text-gray-500">
-                 <h1>Size:Medium</h1>
-                 <h1>Color:Red</h1>
-                </h6>
+                <h2 className="font-normal text-base leading-7 text-gray-500">
+                 <div>Size:Medium</div>
+                 <div>Color:Red</div>
+                </h2>
                 <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">
                   $180
                 </h6>
@@ -265,13 +283,13 @@ Sign up and get 20% off to your first order.
           <div className="grid grid-cols-1 md:grid-cols-4 w-full">
             <div className="md:col-span-2">
               <div className="flex flex-col max-[500px]:items-center gap-3">
-                <h6 className="font-semibold text-base leading-7 text-black">
+                <h6 className="text-base leading-7 text-black font-bold">
                 SKINNY FIT JEANS
                 </h6>
-                <h6 className="font-normal text-base leading-7 text-gray-500">
-           <h1>Size:Large</h1>
-           <h1>Color:Blue</h1>
-                </h6>
+                <h2 className="font-normal text-base leading-7 text-gray-500">
+           <div>Size:Large</div>
+           <div>Color:Blue</div>
+                </h2>
                 <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">
                   $120.00
                 </h6>
@@ -393,21 +411,18 @@ Sign up and get 20% off to your first order.
          <div className='"w-full text-center bg-white rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700"'>
             <img src='Frame 14.png'></img>
          </div>
-            
-            
-            
-
-      
           </div>
           </div>
           </div>
         </div>
         </div>
+        
        
 </section>
 
     </div>
     </header>
+    </div>
   )
 }
 

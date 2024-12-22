@@ -124,16 +124,12 @@ const Seller = () => {
           </div>
         ))}
 
-        {/* Centered View All Button Inside Card Section */}
+     
         <div className="col-span-full flex justify-center mt-8 mb-12">
           <button className="text-lg font-Satoshi font-medium text-black px-16 py-2 border-2 border-gray-200 rounded-full">
             View All
           </button>
-
-
         </div>
-
-    
      </div>
         </div>
    

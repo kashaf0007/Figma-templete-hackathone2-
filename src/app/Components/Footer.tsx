@@ -14,8 +14,6 @@ export default function Footer() {
             <img src="footer-bar.png" alt="footerbar"/>
             </div>
 
-
-
       <div className="bg-[#F0F0F0] w-full h-auto pt-16 pb-8 px-4 sm:px-8 lg:px-20">
         <div className="max-w-[1440px] max-h-[499px] mx-auto pt-20 pb-0 flex flex-col lg:flex-row justify-between items-start lg:h-[499px]  lg:space-y-0">
           {/* Company Info Section */}

@@ -12,6 +12,7 @@ type ArrData = {
 };
 
 const Arrival = () => {
+
   const card:ArrData[] = [
     {
       id: 1,
@@ -45,9 +46,12 @@ const Arrival = () => {
       priceWas: "$160",
       rating: 4.7,
     },
+    
   ];
+ 
 
   // Function to calculate the discount percentage
+  
   const calculateDiscount = (price: string, priceWas: string) => {
     if (priceWas) {
       const discount =
@@ -61,7 +65,7 @@ const Arrival = () => {
   };
 
   return (
-    <div>
+    <div id="arrival">
       {/* NEW ARRIVALS Heading */}
       <div className="text-center mt-12 mb-6">
         <h1
@@ -116,8 +120,10 @@ const Arrival = () => {
                   </button>
                 </>
               )}
+            
             </div>
           </div>
+
         ))}
 
         {/* Centered View All Button Inside Card Section */}
@@ -126,13 +132,17 @@ const Arrival = () => {
             View All
           </button>
         </div>
-     
+        
 
+       
       </div>
 
 
 
+   
     </div>
+  
+  
   );
 };
 
