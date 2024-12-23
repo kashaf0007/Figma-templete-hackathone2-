@@ -19,7 +19,7 @@ const Productpage = () => {
    <header className='bg-white shadow-sm border-b mx-auto flex flex-col w-1440px'>
     <div className='bg-black text-white py-2  text-sm flex justify-between items-center px-8 w-full'>
         <div className='text-center flex-1 '>
-Sign up and get 20% off to your first order.
+<p>Sign up and get 20% off to your first order.</p>
 <a href='#' className='underline hover-text-slate-300' > Sign Up Now </a>
     </div>
     
@@ -172,7 +172,7 @@ Sign up and get 20% off to your first order.
               <div className='w-[25px] h-[25px] bg-[#54d152] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity '/></div>
             </h2>
             <p className="leading-relaxed text-base">
-            "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
+            I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.
             </p>
             <a className="mt-3 inline-flex items-center">
               Posted on August 1,2023
@@ -195,7 +195,7 @@ Sign up and get 20% off to your first order.
               <div className='w-[25px] h-[25px] bg-[#54d152] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity '/></div>
             </h2>
             <p className="leading-relaxed text-base">
-            "The T-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."
+            The T-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I am quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me.
             </p>
             <a className="mt-3 inline-flex items-center">
               Posted on August 15,2023
@@ -230,7 +230,7 @@ Sign up and get 20% off to your first order.
               <div className='w-[25px] h-[25px] bg-[#54d152] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity '/></div>
             </h2>
             <p className="leading-relaxed text-base">
-            "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."
+            This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designers touch in every aspect of this shirt.
             </p>
             <a className="mt-3 inline-flex items-center">
               Posted on August 16,2023
@@ -254,7 +254,7 @@ Sign up and get 20% off to your first order.
               <div className='w-[25px] h-[25px] bg-[#54d152] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity '/></div>
             </h2>
             <p className="leading-relaxed text-base">
-            "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."
+            As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It is evident that the designer poured their creativity into making this t-shirt stand out.
             </p>
             <a className="mt-3 inline-flex items-center">
               Posted on August 17,2023
@@ -287,7 +287,7 @@ Sign up and get 20% off to your first order.
               <div className='w-[25px] h-[25px] bg-[#54d152] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity '/></div>
             </h2>
             <p className="leading-relaxed text-base">
-            "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion."
+            This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designers skill. It is like wearing a piece of art that reflects my passion for both design and fashion.
             </p>
             <a className="mt-3 inline-flex items-center">
               Posted on August 18,2023
@@ -310,7 +310,7 @@ Sign up and get 20% off to your first order.
               <div className='w-[25px] h-[25px] bg-[#54d152] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity '/></div>
             </h2>
             <p className="leading-relaxed text-base">
-            "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter."
+            I am not just wearing a t-shirt; I am wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.
             </p>
             <a className="mt-3 inline-flex items-center">
               Posted on August 19,2023
