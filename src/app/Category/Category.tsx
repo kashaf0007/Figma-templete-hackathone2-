@@ -258,11 +258,9 @@ Sign up and get 20% off to your first order.
   </div>
 
   {/* footer */}
-  <div className="bg-black items-center ">
-            <img src="footer-bar.png" alt="footerbar"/>
+  <div className="bg-black items-center  w-full">
+  <Image src="/footer-bar.png" alt="footerbar" height={500} width={900} />
             </div>
-
-
 
       <div className="bg-[#F0F0F0] w-full h-auto pt-16 pb-8 px-4 sm:px-8 lg:px-20">
         <div className="max-w-[1440px] max-h-[499px] mx-auto pt-20 pb-0 flex flex-col lg:flex-row justify-between items-start lg:h-[499px]  lg:space-y-0">

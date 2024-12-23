@@ -10,8 +10,8 @@ export default function Footer() {
   return (
     
      <>
-      <div className="bg-black items-center ">
-            <img src="footer-bar.png" alt="footerbar"/>
+      <div className="bg-black items-center w-full ">
+            <Image src="/footer-bar.png" alt="footerbar" height={1100} width={900}/>
             </div>
 
       <div className="bg-[#F0F0F0] w-full h-auto pt-16 pb-8 px-4 sm:px-8 lg:px-20">

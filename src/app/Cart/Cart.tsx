@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 import { IoIosArrowDown } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
@@ -72,9 +73,11 @@ const Cart = () => {
         <div className='w-358 h-389 mt-203 ml-16 r-20px border-1 p-14px gap-16 '>
         <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-5 py-6  border-b border-gray-200 group">
           <div className="w-full md:max-w-[126px]">
-            <img
+            <Image
               src="/Frame 33 (2).png"
               alt="T-shirt"
+              height={800}
+              width={600}
               className="mx-auto rounded-xl object-cover"
             />
           </div>
@@ -173,9 +176,11 @@ const Cart = () => {
         </div>
         <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-5 py-6  border-b border-gray-200 group">
           <div className="w-full md:max-w-[126px]">
-            <img
+            <Image
               src="/Checkered-shirt.jpg"
               alt="Checkered-shirt"
+              height={800}
+              width={600}
               className="mx-auto rounded-xl object-cover"
             />
           </div>
@@ -274,22 +279,24 @@ const Cart = () => {
         </div>
         <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-5 py-6  border-b border-gray-200 group">
           <div className="w-full md:max-w-[126px]">
-            <img
+            <Image
               src="/Category4.png"
               alt="SKINNY FIT JEANS"
+              height={800}
+              width={600}
               className="mx-auto rounded-xl object-cover"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 w-full">
             <div className="md:col-span-2">
               <div className="flex flex-col max-[500px]:items-center gap-3">
-                <h6 className="text-base leading-7 text-black font-bold">
+                <h6 className="font-semibold text-base leading-7 text-black">
                 SKINNY FIT JEANS
                 </h6>
-                <h2 className="font-normal text-base leading-7 text-gray-500">
+                <h6 className="font-normal text-base leading-7 text-gray-500">
            <div>Size:Large</div>
            <div>Color:Blue</div>
-                </h2>
+                </h6>
                 <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">
                   $120.00
                 </h6>
@@ -403,20 +410,22 @@ const Cart = () => {
     
 
 
+           {/* <form className=''> */}
             <div className="flex items-center border-b border-gray-200">
-             <img src='Frame 3.png'></img>
+             <Image src='/Frame 3.png' alt='add promo' height={300} width={400}></Image>
              
-             <img src='Frame 100.png' className='ml-72'></img>
+             <Image src='/Frame 100.png' alt='apply' height={200} width={200} className='ml-72'></Image>
             </div>
-         <div className='"w-full text-center bg-white rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700"'>
-            <img src='Frame 14.png'></img>
+         <div className="w-full text-center bg-white rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 ">
+            <Image src='/Frame 14.png' height={50} width={500} alt='check'></Image>
          </div>
+            
+          
           </div>
           </div>
           </div>
         </div>
         </div>
-        
        
 </section>
 
@@ -425,5 +434,5 @@ const Cart = () => {
     </div>
   )
 }
-
-export default Cart
+ export default Cart
+               

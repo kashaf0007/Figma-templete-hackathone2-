@@ -28,18 +28,14 @@ export default function Detail() {
 
         </div>
       </div>
-
-      {/* Dynamic Cards */}
-   
-     
        
         <div className="col-span-full flex justify-center mt-8 mb-12">
           <button className="text-lg font-Satoshi font-medium text-black px-16 py-2 border-2 border-gray-200 rounded-full">
             Load More Reviews
           </button>
           </div>
-          <div className="bg-black items-center ">
-            <img src="footer-bar.png" alt="footerbar" className="w-full"/>
+          <div className="bg-black items-center w-full">
+            <Image src="/footer-bar.png" alt="footerbar" height={500} width={900}/>
             </div>
 
 

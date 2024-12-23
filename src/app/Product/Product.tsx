@@ -120,7 +120,7 @@ Sign up and get 20% off to your first order.
                                 <FaPlus />
                             </div>
                             <div className='"w-full text-center bg-white rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700"'>
-                             <img src='Frame 14.png'></img>
+                             <Image src='/Frame 14.png' alt='check' height={100} width={100}></Image>
                            </div>
                         </div>
          </div>
@@ -322,7 +322,7 @@ Sign up and get 20% off to your first order.
     </div>
   </div>
 </section>
-<img src="/frame.png" alt="reviews" className='justify-center items-center  ml-30' />
+<Image src="/frame.png" alt="reviews" height={1100} width={900} className='justify-center items-center  ml-30' />
 
 </div>
 
