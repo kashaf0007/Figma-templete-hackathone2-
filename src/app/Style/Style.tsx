@@ -17,7 +17,7 @@ const Style = () => {
           <div className="w-[400px] h-[289px] relative ml-14">
             <Image
               src="/casual.jpg" 
-              alt="Dress Style 1"
+              alt="casual"
               layout="fill"
               objectFit="cover"
               className="rounded-md"
@@ -42,7 +42,7 @@ const Style = () => {
           <div className="w-[400px] h-[289px] relative ml-14">
             <Image
               src="/Party.jpg"
-              alt="Dress Style 3"
+              alt="Dress party"
               layout="fill"
               objectFit="cover"
               className="rounded-md"

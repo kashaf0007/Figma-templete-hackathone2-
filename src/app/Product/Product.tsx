@@ -322,7 +322,8 @@ const Productpage = () => {
     </div>
   </div>
 </section>
-<Image src="/frame.png" alt="reviews" height={1100} width={900} className='justify-center items-center  ml-30' />
+
+<Image src="/frame.png" alt="reviews" height={50} width={300} className='justify-center items-center  ml-30' />
 
 </div>
 

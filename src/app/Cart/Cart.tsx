@@ -194,7 +194,7 @@ const Cart = () => {
                  <div>Size:Medium</div>
                  <div>Color:Red</div>
                 </h2>
-                <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">
+                <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300">
                   $180
                 </h6>
               </div>
