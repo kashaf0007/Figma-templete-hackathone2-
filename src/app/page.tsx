@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../app/Components/Navbar'
-import Arrival from './Components/Arrival'
+// import Arrival from './Components/Arrival'
 import Hero from './Components/Hero'
 import Banner from './Components/Banner'
 import Footer from './Components/Footer'
@@ -19,7 +19,7 @@ const Home = () => {
       <Navbar/>
       <Hero/>
       <Banner/>
-      <Arrival/>
+      {/* <Arrival/> */}
        <Seller/>
        <Style/>
        <Detail/>
