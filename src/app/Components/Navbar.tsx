@@ -5,6 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
 import { IoPersonCircleOutline } from "react-icons/io5";
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -23,15 +24,17 @@ const Navbar = () => {
         </div>
         <div className='flex justify-between items-center px-8 py-4' >
             {/* logo */}
+            <Link href='/'>
             <h1 className='text-2xl font-extrabold bg-white text-black px-24'>
                SHOP.CO
             </h1>
+            </Link>
             <nav className='hidden md:flex space-x-8 py-3  items-center'>
-                <a href="#category" className='text-gray-900 hover:text-black float-start underline'>Shop</a>
+                <Link href="/Sidebar" className='text-gray-900 hover:text-black float-start underline'>Shop</Link>
                 <div className='text-black text-xl '>
                 <IoIosArrowDown />
                 </div>
-                <a href="#cart"className='text-gray-900 hover:text-black float-start'>On Sale </a>
+                <Link href="#ProductPage"className='text-gray-900 hover:text-black float-start'>On Sale </Link>
                 <a href="#arrival"  className='text-gray-900 hover:text-black float-start'>New Arrivals</a>
                 <a href='#brand' className='text-gray-900 hover:text-black float-start'>Brands</a>
 
@@ -42,11 +45,18 @@ const Navbar = () => {
                     type="text" placeholder="What are you looking for?" className='bg-white outline-none text-sm'/>
                     <IoSearch />
                     </div>
+                
+                    <Link href='/Cart'>
                     <LuShoppingCart className='text-3xl '/>
-                    <IoPersonCircleOutline className='text-3xl' />
+                    </Link>
                     </div>
+                    <IoPersonCircleOutline className='text-3xl' />
+                 
 
                     </div>
+
+
+                   
 
 
 
