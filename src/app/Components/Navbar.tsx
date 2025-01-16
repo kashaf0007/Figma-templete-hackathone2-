@@ -51,15 +51,7 @@ const Navbar = () => {
                     </Link>
                     </div>
                     <IoPersonCircleOutline className='text-3xl' />
-                 
-
                     </div>
-
-
-                   
-
-
-
 </header>     
  )
  }

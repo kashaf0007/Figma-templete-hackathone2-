@@ -48,10 +48,7 @@ const Arrival = () => {
     },
     
   ];
- 
-
   // Function to calculate the discount percentage
-  
   const calculateDiscount = (price: string, priceWas: string) => {
     if (priceWas) {
       const discount =
@@ -63,7 +60,6 @@ const Arrival = () => {
     }
     return 0;
   };
-
   return (
     <div id="arrival">
       {/* NEW ARRIVALS Heading */}
@@ -119,30 +115,18 @@ const Arrival = () => {
                     {calculateDiscount(item.price, item.priceWas)}% OFF
                   </button>
                 </>
-              )}
-            
+              )}          
             </div>
           </div>
-
         ))}
-
         {/* Centered View All Button Inside Card Section */}
         <div className="col-span-full flex justify-center mt-8 mb-12">
           <button className="text-lg font-Satoshi font-medium text-black px-16 py-2 border-2 border-gray-200 rounded-full">
             View All
           </button>
-        </div>
-        
-
-       
+        </div>  
       </div>
-
-
-
-   
     </div>
-  
-  
   );
 };
 

@@ -128,8 +128,7 @@ const Productpage = () => {
       
 </div>
 
-</header>     
-
+                 </header>     
                   <div className='justify-center items-center flex mt-20 mb-7 gap-80'>
                                 <p className='font-semibold '> Product Details</p>
                                 <p className='font-semibold '>Rating & Reviews</p>
@@ -207,9 +206,6 @@ const Productpage = () => {
     </div>
   </div>
 </section>
-
-
-
 <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto flex flex-wrap">
     <div className="flex flex-wrap -m-4">

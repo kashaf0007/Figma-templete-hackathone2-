@@ -4,19 +4,12 @@ import { FaStar } from 'react-icons/fa';
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image"; 
-import { RxCross2 } from "react-icons/rx";
-import { IoSearch } from "react-icons/io5";
-import { LuShoppingCart } from "react-icons/lu";
-import { IoPersonCircleOutline } from "react-icons/io5";
 import React from "react";
 import { FaChevronDown } from "react-icons/fa";
-import { IoLogoTwitter } from "react-icons/io";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoArrowBack } from "react-icons/io5";
-import { RiFacebookFill } from "react-icons/ri";
-import { FaInstagram } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io5";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 export default function Sidebar() { 
     const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
@@ -220,16 +213,17 @@ export default function Sidebar() {
         
   </div>
   </div>
+  <Footer/>
 
   {/* footer */}
-  <div className="bg-black items-center  w-full">
+  {/* <div className="bg-black items-center  w-full">
   <Image src="/footer-bar.png" alt="footerbar" height={500} width={900} />
             </div>
 
       <div className="bg-[#F0F0F0] w-full h-auto pt-16 pb-8 px-4 sm:px-8 lg:px-20">
         <div className="max-w-[1440px] max-h-[499px] mx-auto pt-20 pb-0 flex flex-col lg:flex-row justify-between items-start lg:h-[499px]  lg:space-y-0">
           {/* Company Info Section */}
-          <div className="flex flex-col gap-4 justify-start items-start ">
+          {/* <div className="flex flex-col gap-4 justify-start items-start ">
             <h3 className="font-satoshi w-[167px] h-[23px] text-4xl font-bold mb-4">SHOP.CO</h3>
             <p className="font-satoshi w-[248px] h-[66px] text-sm text-[#00000099] mb-8">
               We have clothes that suit your style and which you’re proud to wear. From women to men.
@@ -249,10 +243,10 @@ export default function Sidebar() {
                 <IoLogoGithub className="text-xl" />
               </div>
             </div>
-          </div>
+          </div>  */}
 
           {/* Links Sections */}
-          <div className="flex flex-wrap lg:w-2/3 justify-between">
+          {/* <div className="flex flex-wrap lg:w-2/3 justify-between">
             <div className="w-full sm:w-1/2 lg:w-1/4 mb-8">
               <h5 className="font-satoshi text-lg font-semibold mb-4 tracking-wide">COMPANY</h5>
               <ul className="font-satoshi text-sm text-[#00000099] space-y-4">
@@ -290,12 +284,12 @@ export default function Sidebar() {
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Divider */}
-        <div className="border-t border-[#0000001A] mt-0 mb-4"></div>
+        {/* <div className="border-t border-[#0000001A] mt-0 mb-4"></div> */}
 {/* footer */}
-        <div className="flex justify-between items-center ">
+        {/* <div className="flex justify-between items-center ">
           <div className="font-satoshi text-sm text-[#00000099]">Shop.co © 2000-2023, All Rights Reserved</div>
           <Image src={"/Badge (3).jpg"} alt={"Paypal.jpg"} height={30} width={20} />
           <Image src={"/Mastercard.jpg"} alt={"Paypal.jpg"} height={30} width={20} />
@@ -304,7 +298,7 @@ export default function Sidebar() {
 
           <Image src={"/Badge (2).jpg"} alt={"Paypal.jpg"} height={30} width={20} />
         </div>
-      </div>
+      </div> */}
 </div>
    
    

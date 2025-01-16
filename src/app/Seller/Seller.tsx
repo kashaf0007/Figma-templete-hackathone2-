@@ -2,10 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { IoMdStar } from "react-icons/io";
 
-
-
-
-
 type SellerData = {
   id: number;
   image: string;

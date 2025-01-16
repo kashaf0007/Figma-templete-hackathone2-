@@ -3,7 +3,6 @@ import { FaCheck, FaStar } from 'react-icons/fa'
 
 const Caeousal = () => {
   return (
-
         <div className="py-16 bg-white">
       <h1 className="text-4xl font-extrabold bg-white text-left ml-8 mb-12 flex items-center justify-between">
         <div>OUR HAPPY CUSTOMERS</div>
