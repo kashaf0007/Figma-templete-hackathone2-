@@ -1,53 +1,56 @@
 import React from "react";
 import Image from "next/image";
-import { IoMdStar } from "react-icons/io";
+import { client } from "@/sanity/lib/client";
+import Link from "next/link";
+import { FaStar } from "react-icons/fa";
 
 type ArrData = {
   id: number;
-  image: string;
-  title: string;
+  imageUrl: string;
+  name: string;
   price: string;
   priceWas: string;
   rating: number;
 };
 
-const Arrival = () => {
+ async function Arrival (){
 
-  const card:ArrData[] = [
-    {
-      id: 1,
-      image: "/T-shirt1.jpg",
-      title: "T-SHIRT WITH TAPE DETAILS",
-      price: "$120",
-      priceWas: "",
-      rating: 4.5,
-    },
-    {
-      id: 2,
-      image: "/jeans.jpg",
-      title: "SKINNY FIT JEANS",
-      price: "$240",
-      priceWas: "$260",
-      rating: 4.5,
-    },
-    {
-      id: 3,
-      image: "/checkered-shirt.jpg",
-      title: "CHECKERED SHIRT",
-      price: "$180",
-      priceWas: "",
-      rating: 4.5,
-    },
-    {
-      id: 4,
-      image: "/T-shirt2.jpg",
-      title: "SLEEVE STRIPED T-SHIRT",
-      price: "$130",
-      priceWas: "$160",
-      rating: 4.7,
-    },
+  const card:ArrData[]=await client.fetch('*[_type == "products"]{_id,name,description,price,"imageUrl":image.asset->url,category,discountPercent, isNew,sizes}')
+  // const card:ArrData[] = [
+  //   {
+  //     id: 1,
+  //     image: "/T-shirt1.jpg",
+  //     title: "T-SHIRT WITH TAPE DETAILS",
+  //     price: "$120",
+  //     priceWas: "",
+  //     rating: 4.5,
+  //   },
+  //   {
+  //     id: 2,
+  //     image: "/jeans.jpg",
+  //     title: "SKINNY FIT JEANS",
+  //     price: "$240",
+  //     priceWas: "$260",
+  //     rating: 4.5,
+  //   },
+  //   {
+  //     id: 3,
+  //     image: "/checkered-shirt.jpg",
+  //     title: "CHECKERED SHIRT",
+  //     price: "$180",
+  //     priceWas: "",
+  //     rating: 4.5,
+  //   },
+  //   {
+  //     id: 4,
+  //     image: "/T-shirt2.jpg",
+  //     title: "SLEEVE STRIPED T-SHIRT",
+  //     price: "$130",
+  //     priceWas: "$160",
+  //     rating: 4.7,
+  //   },
     
-  ];
+  // ];
   // Function to calculate the discount percentage
   const calculateDiscount = (price: string, priceWas: string) => {
     if (priceWas) {
@@ -75,33 +78,32 @@ const Arrival = () => {
       {/* Card Section */}
       <div className="w-[90%] border-b-2 border-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-auto">
         {card.map((item) => (
+          <Link key={item.id} href={'/Sidebar'}>
           <div
-            key={item.id}
+            
             className="bg-white rounded-lg p-2 hover:shadow-lg transition-shadow flex flex-col justify-between"
           >
             <div className="relative w-full h-[300px] rounded-[20px] overflow-hidden">
               <Image
-                src={item.image}
-                alt={item.title}
+                src={item.imageUrl}
+                alt={item.name}
                 layout="fill"
                 objectFit="cover"
                 className="rounded-md"
               />
             </div>
-            <h2 className="text-sm font-semibold mt-2">{item.title}</h2>
+            <h2 className="text-sm font-semibold mt-2">{item.name}</h2>
             <div className="flex items-center gap-2 mt-1">
-              <div className="flex text-yellow-500">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <IoMdStar
-                    key={index}
-                    className={`${
-                      index < Math.round(item.rating)
-                        ? "text-yellow-500"
-                        : "text-gray-300"
-                    } text-lg`}
-                  />
-                ))}
-              </div>
+             
+               <div className="flex items-center mb-3">
+                          <h2 className="text-gray-900 text-lg title-font font-medium flex">
+                              <FaStar className="text-yellow-500 mb-4 " />
+                              <FaStar className="text-yellow-500 mb-4" />
+                               <FaStar className="text-yellow-500 mb-4" />
+                               <FaStar className="text-yellow-500 mb-4" />
+                               <FaStar className="text-yellow-500 mb-4" />
+                          </h2>
+                        </div>
               <span className="text-sm">{item.rating}/5</span>
             </div>
             <div className="mt-1 flex items-center gap-2">
@@ -118,6 +120,7 @@ const Arrival = () => {
               )}          
             </div>
           </div>
+          </Link>
         ))}
         {/* Centered View All Button Inside Card Section */}
         <div className="col-span-full flex justify-center mt-8 mb-12">

@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Style = () => {
   return (
-    <div className="w-[90%] max-w-[1440px] h-[866px] mx-auto mt-12 bg-[#F0F0F0] rounded-2xl p-14">
+    <div className="w-[90%] max-w-[1440px] h-[866px] mx-auto mt-12 bg-white rounded-2xl p-14">
       <div className="text-center mb-6">
-        <h1 className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] my-12">
+        <h1 className=" text-4xl font-extrabold leading-[57.9px] my-12">
           BROWSE  BY DRESS STYLE
         </h1>
       </div>
