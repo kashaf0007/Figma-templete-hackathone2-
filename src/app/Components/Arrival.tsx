@@ -13,45 +13,9 @@ type ArrData = {
   rating: number;
 };
 
- async function Arrival (){
+async function Arrival (){
 
   const card:ArrData[]=await client.fetch('*[_type == "products"]{_id,name,description,price,"imageUrl":image.asset->url,category,discountPercent, isNew,sizes}')
-  // const card:ArrData[] = [
-  //   {
-  //     id: 1,
-  //     image: "/T-shirt1.jpg",
-  //     title: "T-SHIRT WITH TAPE DETAILS",
-  //     price: "$120",
-  //     priceWas: "",
-  //     rating: 4.5,
-  //   },
-  //   {
-  //     id: 2,
-  //     image: "/jeans.jpg",
-  //     title: "SKINNY FIT JEANS",
-  //     price: "$240",
-  //     priceWas: "$260",
-  //     rating: 4.5,
-  //   },
-  //   {
-  //     id: 3,
-  //     image: "/checkered-shirt.jpg",
-  //     title: "CHECKERED SHIRT",
-  //     price: "$180",
-  //     priceWas: "",
-  //     rating: 4.5,
-  //   },
-  //   {
-  //     id: 4,
-  //     image: "/T-shirt2.jpg",
-  //     title: "SLEEVE STRIPED T-SHIRT",
-  //     price: "$130",
-  //     priceWas: "$160",
-  //     rating: 4.7,
-  //   },
-    
-  // ];
-  // Function to calculate the discount percentage
   const calculateDiscount = (price: string, priceWas: string) => {
     if (priceWas) {
       const discount =
@@ -63,19 +27,20 @@ type ArrData = {
     }
     return 0;
   };
+  
   return (
     <div id="arrival">
+      
       {/* NEW ARRIVALS Heading */}
       <div className="text-center mt-12 mb-6">
         <h1
-          className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] text-center"
-          style={{ textUnderlinePosition: "from-font" }}
-        >
-          NEW ARRIVALS
+          className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] text-center" >
+          Arrival
         </h1>
       </div>
 
       {/* Card Section */}
+      <div>
       <div className="w-[90%] border-b-2 border-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-auto">
         {card.map((item) => (
           <Link key={item.id} href={'/Sidebar'}>
@@ -104,7 +69,7 @@ type ArrData = {
                                <FaStar className="text-yellow-500 mb-4" />
                           </h2>
                         </div>
-              <span className="text-sm">{item.rating}/5</span>
+              <span className="text-sm">{item.rating}3.5/5</span>
             </div>
             <div className="mt-1 flex items-center gap-2">
               <span className="text-lg font-bold text-gray-800">{item.price}</span>
@@ -124,13 +89,16 @@ type ArrData = {
         ))}
         {/* Centered View All Button Inside Card Section */}
         <div className="col-span-full flex justify-center mt-8 mb-12">
-          <button className="text-lg font-Satoshi font-medium text-black px-16 py-2 border-2 border-gray-200 rounded-full">
+        <Link href={'/Sidebar'}>
+          <button className="text-lg  font-medium  hover:bg-black hover:text-white text-black px-16 py-2 border-2 border-gray-200 rounded-full">
             View All
           </button>
+          </Link>
         </div>  
       </div>
     </div>
-  );
+    </div>
+);
 };
 
 export default Arrival;

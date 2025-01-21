@@ -11,8 +11,8 @@ import Style from "../app/Style/Style"
 // import Product from './ProductDetail/Detail'
 import Arrival from './Components/Arrival'
 import Caeousal from './Components/Caeousal'
-import Productpage from './Product/Product'
-import Product from './ProductDetail/Detail'
+// import Productpage from './Product/Product'
+// import Product from './ProductDetail/Detail'
 
 
 const Home = () => {
@@ -26,8 +26,8 @@ const Home = () => {
        <Style/>
        <Caeousal/>
       
-       <Productpage/>
-       <Product/>
+       {/* <Productpage/>
+       <Product/> */}
        <Footer/>
     </div>
   )
