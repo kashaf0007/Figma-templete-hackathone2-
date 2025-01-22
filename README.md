@@ -91,7 +91,7 @@ Test Case Results
                  ERROR HANDLING ,PERFORMANCE ACCESIBILITY ,SEO AND SECURITY.
 
 
-                 Checklist for Day 5: 
+ #### Checklist for Day 5: 
 1 Functional Testing: 
 correct
 2 Error Handling: 
@@ -106,7 +106,7 @@ correct
 correct
 7 Final Review: 
 correct
-  #DAY 7
+  #### DAY 7
 SSL AND HTTPS ENABLE:
 https://figma-templete-hackathone2-trtk.vercel.app/
 
@@ -116,7 +116,7 @@ MAIN BRACH :PRODUCTION
 Performance Optimiation
 image and alt
 
-Business Pitch Deck and Presentation:
+#### Business Pitch Deck and Presentation:
 
 1. Introduction: Name, tagline, overview.
 2. Problem Statement: Identify problem, data, examples.
@@ -131,7 +131,7 @@ Business Pitch Deck and Presentation:
 
 
 
- ###Checklist for Day 7: 
+ ### Checklist for Day 7: 
 1 Deployment Checklist: 
 correct
 2 Security Checklist: 
@@ -144,7 +144,7 @@ correct
 5 Resume PDF: 
 correct
 
-###Gratitude and Positive Gestures: 
+### Gratitude and Positive Gestures: 
 We encourage every student to write a single-line thank-you note 
 for their teachers, teaching assistants, student leaders, senior 
 students, and rising stars. Mention their names and acknowledge 
