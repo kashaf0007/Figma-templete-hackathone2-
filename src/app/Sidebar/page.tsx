@@ -65,11 +65,10 @@ async function Sidebar() {
             {/* Clothes Category */}
             <div className="clothes-category">
               <ul className="space-y-3">
-                <li className="flex justify-between items-center text-xl  text-black">T-Shirts <IoIosArrowForward /></li>
-                <li className="flex justify-between items-center text-xl  text-black">Shorts <IoIosArrowForward /></li>
-                <li className="flex justify-between items-center text-xl  text-black">Shirts <IoIosArrowForward /></li>
-                <li className="flex justify-between items-center text-xl  text-black">Hoodie <IoIosArrowForward /></li>
-                <li className="flex justify-between items-center text-xl  text-black">Jeans <IoIosArrowForward /></li>
+               <Link href={'/Arrivals'}> <li className="flex justify-between items-center text-xl  text-black" >T-Shirts <IoIosArrowForward /></li></Link>
+               <Link href={'/Shorts'}> <li className="flex justify-between items-center text-xl  text-black">Jeans <IoIosArrowForward /></li></Link>
+               <Link href={'/Hoodie'}> <li className="flex justify-between items-center text-xl  text-black">Hoodie <IoIosArrowForward /></li></Link>
+               
               </ul>
             </div>
 
@@ -132,23 +131,15 @@ async function Sidebar() {
 
             <hr className="my-4 border-t border-gray-600" />
 
-            {/* Dress Style */}
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl font-semibold">Dress Style</h2>
-              <IoIosArrowDown className="text-2xl" />
-            </div>
-            <ul className="space-y-3 mt-3">
-              <li className="flex justify-between items-center text-base text-black">Casual<IoIosArrowForward /></li>
-              <li className="flex justify-between items-center text-base text-black">Formal<IoIosArrowForward /></li>
-              <li className="flex justify-between items-center text-base text-black">Party<IoIosArrowForward /></li>
-              <li className="flex justify-between items-center text-base text-black">Gym<IoIosArrowForward /></li>
-            </ul>
-
+            <Link href={'/'}>
             <div className="mt-8 flex justify-center">
+           
               <button className="w-full h-12 bg-black text-white rounded-full hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
                 Apply Filter
               </button>
+            
             </div>
+            </Link>
           </div>
         </div>
         <div className="flex-1 p-5 md:ml-10 mt-10">

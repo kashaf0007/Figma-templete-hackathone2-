@@ -1,22 +1,45 @@
 import React from "react";
 import Image from "next/image";
-import { client } from "@/sanity/lib/client";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
-type ArrData = {
+
+type SellerData = {
   id: number;
-  imageUrl: string;
-  name: string;
+  image: string;
+  title: string;
   price: string;
   priceWas: string;
   rating: number;
 };
 
-async function Arrival (){
+const Hoodie = () => {
+  const card: SellerData[] = [
+    {
+      id: 1,
+      image: "/hoodie.jpeg",
+      title: "Classic Black Pullover Hoodie",
+      price: "$128",
+      priceWas: "$160",
+      rating: 4.7,
+    },
+    {
+      id: 2,
+      image: "/hoodie2.jpeg",
+      title: "Classic White Pullover Hoodie",
+      price: "$150",
+      priceWas: "$169",
+      rating: 4.0,
+    },
+    
+   
+  ];
 
-  const card:ArrData[]=await client.fetch('*[_type == "products"]{_id,name,description,price,"imageUrl":image.asset->url,category,discountPercent, isNew,sizes}')
-  const calculateDiscount = (price: string, priceWas: string) => {
+
+   // Function to calculate the discount percentage
+   const calculateDiscount = (price: string, priceWas: string) => {
     if (priceWas) {
       const discount =
         ((parseFloat(priceWas.replace("$", "")) -
@@ -27,21 +50,22 @@ async function Arrival (){
     }
     return 0;
   };
-  
+
   return (
-    <div id="arrival">
-      
+    <div>
+      <Navbar/>
       {/* NEW ARRIVALS Heading */}
       <div className="text-center mt-12 mb-6">
-        <h1 
-          className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] text-center" >
-          Arrival
+        <h1
+          className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] text-center"
+          
+        >
+          HOODIE
         </h1>
       </div>
 
-      {/* Card Section */}
-      <div>
-      <div className="w-[90%] border-b-2 border-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-auto">
+  
+       <div className="w-[90%] border-b-2 border-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-auto">
         {card.map((item) => (
           <Link key={item.id} href={'/Sidebar'}>
           <div
@@ -50,14 +74,14 @@ async function Arrival (){
           >
             <div className="relative w-full h-[300px] rounded-[20px] overflow-hidden">
               <Image
-                src={item.imageUrl}
-                alt={item.name}
+                src={item.image}
+                alt={item.image}
                 layout="fill"
                 objectFit="cover"
                 className="rounded-md"
               />
             </div>
-            <h2 className="text-sm font-semibold mt-2">{item.name}</h2>
+            <h2 className="text-sm font-semibold mt-2">{item.title}</h2>
             <div className="flex items-center gap-2 mt-1">
              
                <div className="flex items-center mb-3">
@@ -69,7 +93,7 @@ async function Arrival (){
                                <FaStar className="text-yellow-500 mb-4" />
                           </h2>
                         </div>
-              <span className="text-sm">{item.rating}3.5/5</span>
+              <span className="text-sm">{item.rating}/5</span>
             </div>
             <div className="mt-1 flex items-center gap-2">
               <span className="text-lg font-bold text-gray-800">{item.price}</span>
@@ -89,16 +113,20 @@ async function Arrival (){
         ))}
         {/* Centered View All Button Inside Card Section */}
         <div className="col-span-full flex justify-center mt-8 mb-12">
-        <Link href={'/Sidebar'}>
-          <button className="text-lg  font-medium  hover:bg-black hover:text-white text-black px-16 py-2 border-2 border-gray-200 rounded-full">
+          <Link href={'/Sidebar'}>
+          <button className="text-lg font-Satoshi font-medium text-black px-16 py-2 border-2 border-gray-200 rounded-full">
             View All
           </button>
           </Link>
         </div>  
+       
       </div>
-    </div>
-    </div>
-);
+      <Footer/>
+        </div>
+   
+  );
 };
 
-export default Arrival;
+export default Hoodie;
+
+// how i can make my shipment through shipengine

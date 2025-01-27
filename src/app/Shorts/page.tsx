@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { IoMdStar } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowForward, IoMdStar } from "react-icons/io";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import Link from "next/link";
 
-
-type ProductData = {
+type ArrData = {
   id: number;
   image: string;
   title: string;
@@ -12,72 +14,88 @@ type ProductData = {
   rating: number;
 };
 
-const Product = () => {
-  const card: ProductData[] = [
+const Shorts = () => {
+
+  const card:ArrData[] = [
     {
       id: 1,
-      image: "/Product-detail.png",
-      title: "Polo with Contrast Trims",
-      price: "$212",
-      priceWas: "$242",
-      rating: 4.0,
+      image: "/Category9.png",
+      title: "LOOSE FIT BERMUDA SHORTS",
+      price: "$120",
+      priceWas: "",
+      rating: 4.5,
     },
     {
       id: 2,
-      image: "/Category1.png",
-      title: "Gradient Graphic T-shirt",
-      price: "$145",
-      priceWas: "",
-      rating: 3.5,
+      image: "/jeans.jpg",
+      title: "SKINNY FIT JEANS",
+      price: "$240",
+      priceWas: "$260",
+      rating: 4.5,
     },
     {
       id: 3,
-      image: "/Category2.png",
-      title: "Polo with Tipping Details",
+      image: "/jeans2.jpg",
+      title: "Classic Black Straight-Leg Jeans",
       price: "$180",
       priceWas: "",
       rating: 4.5,
     },
     {
       id: 4,
-      image: "/T-shirt05.png",
-      title: "Black Striped T-shirt",
-      price: "$120",
-      priceWas: "150",
-      rating: 5.0,
+      image: "/jeans3.jpeg",
+      title: "Black Athletic Jogger Pants with Side Stripes",
+      price: "$130",
+      priceWas: "$160",
+      rating: 4.7,
     },
+    {
+        id: 5,
+        image: "/jeans4.jpeg",
+        title: "Gray Slim-Fit Jogger Pants",
+        price: "$212",
+        priceWas: "$232",
+        rating: 4.7,
+      },
+      {
+        id: 6,
+        image: "/jeans5.jpeg",
+        title: "Beige Slim-Fit Jogger Pants",
+        price: "$269",
+        priceWas: "$145",
+        rating: 4.0,
+      },
+      {
+        id: 7,
+        image: "/jeans.jpeg",
+        title: "Classic Black Straight-Leg Jeans",
+        price: "$580",
+        priceWas: "120",
+        rating: 3.5,
+      },
+   
   ];
 
-  // Function to calculate the discount percentage
-  const calculateDiscount = (price: string, priceWas: string) => {
-    if (priceWas) {
-      const discount =
-        ((parseFloat(priceWas.replace("$", "")) -
-          parseFloat(price.replace("$", ""))) /
-          parseFloat(priceWas.replace("$", ""))) *
-        100;
-      return Math.round(discount);
-    }
-    return 0;
-  };
-
   return (
-    <div>
+    <div id="arrival">
+        <Navbar/>
      
+      
+      {/* NEW ARRIVALS Heading  */}
       <div className="text-center mt-12 mb-6">
         <h1
-          className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] text-center"
-          style={{ textUnderlinePosition: "from-font" }}
-        >
-          YOU MIGHT ALSO LIKE
+          className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] text-center">
+          JEANS
         </h1>
       </div>
-
+    
+     
       {/* Card Section */}
       <div className="w-[90%] border-b-2 border-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-auto">
         {card.map((item) => (
+          <Link key={item.id} href={'/Sidebar'}>
           <div
-            key={item.id}
+           
             className="bg-white rounded-lg p-2 hover:shadow-lg transition-shadow flex flex-col justify-between"
           >
             <div className="relative w-full h-[300px] rounded-[20px] overflow-hidden">
@@ -89,6 +107,8 @@ const Product = () => {
                 className="rounded-md"
               />
             </div>
+          
+           
             <h2 className="text-sm font-semibold mt-2">{item.title}</h2>
             <div className="flex items-center gap-2 mt-1">
               <div className="flex text-yellow-500">
@@ -105,6 +125,8 @@ const Product = () => {
               </div>
               <span className="text-sm">{item.rating}/5</span>
             </div>
+            
+            
             <div className="mt-1 flex items-center gap-2">
               <span className="text-lg font-bold text-gray-800">{item.price}</span>
               {item.priceWas && (
@@ -112,29 +134,35 @@ const Product = () => {
                   <span className="text-sm line-through text-gray-500">
                     {item.priceWas}
                   </span>
-                  <button className="bg-pink-100 text-red-600 text-xs py-1 px-2 rounded-full">
-                    {calculateDiscount(item.price, item.priceWas)}% OFF
-                  </button>
+                  
                 </>
-              )}
-            </div>
-          </div>
+              
+              )}      
+             </div>
+             </div>
+             </Link>
+            
+           
+        
+   
+          
         ))}
-
-       
+        {/* Centered View All Button Inside Card Section */}
         <div className="col-span-full flex justify-center mt-8 mb-12">
           <button className="text-lg font-Satoshi font-medium text-black px-16 py-2 border-2 border-gray-200 rounded-full">
             View All
           </button>
-
-
-        </div>
-
-    
-     </div>
-        </div>
+          </div>
+        </div>  
+        
+      
+      <Footer/>
+      
+    </div>
    
-  );
+    
+
+  )
 };
 
-export default Product;
+export default Shorts;

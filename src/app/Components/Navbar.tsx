@@ -4,6 +4,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoPersonCircleOutline, IoSearch } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
+import SearchBar from './Searchbar';
+
 
 const Navbar = () => {
 
@@ -35,18 +37,17 @@ const Navbar = () => {
                         <IoIosArrowDown />
                     </div>
                     <Link href="/Sidebar" className='text-gray-900 text-xl hover:text-black float-start'>On Sale </Link>
-                    <Link href="#arrival" className='text-gray-900 text-xl hover:text-black float-start'>New Arrivals</Link>
+                    <Link href={'/Arrivals'} className='text-gray-900 text-xl hover:text-black float-start'>New Arrivals</Link>
                     <Link href='#brand' className='text-gray-900 text-xl hover:text-black float-start'>Brands</Link>
 
                 </nav>
                 <div className='flex items-center space-x-6'>
-                      <div className='hidden lg:flex items-center bg-slate-200 rounder-md px-3 py-2'>
+                      {/* <div className='hidden lg:flex items-center bg-slate-200 rounder-md px-3 py-2'>
                         <input
                             type="text" placeholder="What are you looking for?" className='bg-white outline-none text-sm' />
                         <IoSearch />
-                    </div>  
-             
-        
+                    </div>   */}
+                    <SearchBar/>
                     <Link href='/Cart'>
                         <LuShoppingCart className='text-3xl ' />
                     </Link>

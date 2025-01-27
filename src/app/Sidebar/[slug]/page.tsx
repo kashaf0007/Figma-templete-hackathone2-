@@ -2,6 +2,7 @@
 "use client";
 
 import Navbar from '@/app/Components/Navbar';
+import Product from '@/app/ProductDetail/page';
 import { client } from '@/sanity/lib/client';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
@@ -95,7 +96,7 @@ const Slug = () => {
                                 </div>
                             </div>
                         </div>
-
+<Product/>
 
                     </div>
                 </section>}
