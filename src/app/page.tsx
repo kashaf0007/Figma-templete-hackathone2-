@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Navbar from '../app/Components/Navbar'
 import Hero from './Components/Hero'
@@ -8,7 +7,6 @@ import Seller from "./Seller/Seller";
 import Style from "../app/Style/Style"
 import Arrival from './Components/Arrival'
 import Caeousal from './Components/Caeousal'
-
 
 const Home = () => {
   return (

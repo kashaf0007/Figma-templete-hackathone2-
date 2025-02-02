@@ -3,10 +3,10 @@ import localFont from "next/font/local";
 import "./globals.css";
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
+  // SignInButton,
+  // SignedIn,
+  // SignedOut,
+  // UserButton
 } from '@clerk/nextjs'
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,15 +29,7 @@ export default function RootLayout({
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}> 
         {children}
           
       </body>

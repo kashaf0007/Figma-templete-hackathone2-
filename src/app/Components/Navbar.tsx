@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { SignedOut, SignInButton } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 import { IoIosArrowDown } from "react-icons/io";
-import { IoPersonCircleOutline, IoSearch } from "react-icons/io5";
+import { IoPersonCircleOutline } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
 import SearchBar from './Searchbar';
@@ -42,6 +44,12 @@ const Navbar = () => {
                 <Link href='/Login'>
                 <IoPersonCircleOutline className='text-3xl' />
                 </Link>
+                <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
             </div>
         </header>
     )
