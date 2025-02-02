@@ -82,8 +82,3 @@ const Hero = () => {
 
 export default Hero;
 
-// har request say pehlay chana middle ware ka kaam ha yeh
-// middle ware vallidate kerta hai 
-// login token gernerate 
-// miidle ware used in front end and backend both nextjs backhand
-// login api express next.js

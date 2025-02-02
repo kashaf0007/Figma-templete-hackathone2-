@@ -128,5 +128,3 @@ const Hoodie = () => {
 };
 
 export default Hoodie;
-
-// how i can make my shipment through shipengine

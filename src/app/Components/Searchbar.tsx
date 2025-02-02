@@ -104,22 +104,3 @@ export default Searchbar;
 
 
 
-
-
-
-// import ProductListAsync from '@/app/Components/ProductList';
-// import Searchbar from '@/app/Components/search2';
-
-// const ProductsPage = () => {
-//   return (
-//     <div className="p-6">
-//       <h1 className="text-xl font-bold mb-4">Product Search</h1>
-//       <Searchbar />
-      
-//       <h2 className="text-lg font-semibold mt-6">All Products</h2>
-//       <ProductListAsync />
-//     </div>
-//   );
-// };
-
-// export default ProductsPage;

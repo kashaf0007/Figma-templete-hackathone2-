@@ -132,12 +132,12 @@ const Cart = () => {
                     <p className="font-medium">${total.toFixed(2)}</p>
                   </div>
                 </div>
-                {/* <Link href={'/AddressForm'}> */}
+                <Link href={'/AddressForm'}>
                 <button onClick={handleCheckout}  className="bg-indigo-500 text-white py-2 px-8 rounded hover:bg-indigo-600 w-full">
                   CHECK OUT
                
                 </button>
-                {/* </Link> */}
+                </Link>
                 {isCheckoutComplete && <p className="mt-4 text-green-600 font-bold text-center">Checkout complete! Thank you for your purchase.</p>}
               </div>
             </div>
