@@ -4,7 +4,6 @@ import { FaExchangeAlt } from 'react-icons/fa'
 import { MdOutlineDeliveryDining } from 'react-icons/md'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import { GiSettingsKnobs } from 'react-icons/gi'
 import Link from 'next/link'
 
 const Services = () => {
@@ -28,13 +27,6 @@ const Services = () => {
             <h1 className='text-2xl font-medium  text-black px-24'>
                All Reviews(451)
             </h1>
-    
-            {/* <div className='flex items-center space-x-6'>
-
-            <GiSettingsKnobs className='font-semibold text-2xl' />
-            <Image src={"/latest.png"} alt={"product-img"} height={50} width={50}></Image>
-            <Image className='text-black' src={"/Write a Review.png"} alt={"product-img"} height={100} width={120}></Image>
-                    </div> */}
                     </div>   
                      
 <hr></hr>

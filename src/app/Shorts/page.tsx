@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { IoIosArrowDown, IoIosArrowForward, IoMdStar } from "react-icons/io";
+import {  IoMdStar } from "react-icons/io";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Link from "next/link";

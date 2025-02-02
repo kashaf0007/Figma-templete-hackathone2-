@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { IoIosArrowDown, IoIosArrowForward, IoMdStar } from "react-icons/io";
+import {IoMdStar } from "react-icons/io";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Link from "next/link";
@@ -93,7 +93,6 @@ const Arrivals = () => {
       <div className="text-center mt-12 mb-6">
         <h1
           className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] text-center"
-          style={{ textUnderlinePosition: "from-font" }}
         >
           NEW ARRIVALS
         </h1>
@@ -101,12 +100,11 @@ const Arrivals = () => {
     
      
       {/* Card Section */}
+      
       <div className="w-[90%] border-b-2 border-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-auto">
         {card.map((item) => (
           <Link key={item.id} href={'/Sidebar'}>
-          <div
-           
-            className="bg-white rounded-lg p-2 hover:shadow-lg transition-shadow flex flex-col justify-between"
+          <div className="bg-white rounded-lg p-2 hover:shadow-lg transition-shadow flex flex-col justify-between"
           >
             <div className="relative w-full h-[300px] rounded-[20px] overflow-hidden">
               <Image
@@ -116,9 +114,8 @@ const Arrivals = () => {
                 objectFit="cover"
                 className="rounded-md"
               />
-            </div>
-          
-           
+                  </div>
+                 
             <h2 className="text-sm font-semibold mt-2">{item.title}</h2>
             <div className="flex items-center gap-2 mt-1">
               <div className="flex text-yellow-500">
@@ -151,11 +148,6 @@ const Arrivals = () => {
              </div>
              </div>
              </Link>
-            
-           
-        
-   
-          
         ))}
         {/* Centered View All Button Inside Card Section */}
         <div className="col-span-full flex justify-center mt-8 mb-12">

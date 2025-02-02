@@ -62,9 +62,7 @@ const Style = () => {
             />
           </div>
         </div>
-
     </div>
-   
       </div>
      
   );

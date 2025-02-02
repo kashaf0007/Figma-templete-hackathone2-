@@ -42,8 +42,8 @@ async function Arrival (){
       {/* Card Section */}
       <div>
       <div className="w-[90%] border-b-2 border-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-auto">
-        {card.map((item) => (
-          <Link key={item.id} href={'/Sidebar'}>
+        {card.map((item,i) => (
+          <Link key={i} href={'/Sidebar'}>
           <div
             
             className="bg-white rounded-lg p-2 hover:shadow-lg transition-shadow flex flex-col justify-between"
