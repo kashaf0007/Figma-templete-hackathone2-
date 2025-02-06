@@ -14,7 +14,6 @@ type ArrData = {
 };
 
 async function Arrival (){
-
   const card:ArrData[]=await client.fetch('*[_type == "products"]{_id,name,description,price,"imageUrl":image.asset->url,category,discountPercent, isNew,sizes}')
   const calculateDiscount = (price: string, priceWas: string) => {
     if (priceWas) {

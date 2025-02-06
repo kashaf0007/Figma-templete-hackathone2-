@@ -143,8 +143,6 @@ const Cart = () => {
                   {/* CHECK OUT */}
                   <CheckoutButton/>
                 </button>
-               
-               
                 {isCheckoutComplete && <p className="mt-4 text-green-600 font-bold text-center">Checkout complete! Thank you for your purchase.</p>}
               </div>
             </div>

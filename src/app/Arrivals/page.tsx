@@ -156,8 +156,6 @@ const Arrivals = () => {
           </button>
           </div>
         </div>  
-        
-      
       <Footer/>
       
     </div>
