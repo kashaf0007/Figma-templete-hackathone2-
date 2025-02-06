@@ -5,7 +5,9 @@ import Image from "next/image";
 import Navbar from "../Components/Navbar";
 import Link from "next/link";
 import { MdDelete } from "react-icons/md";
-
+import { useRouter } from "next/navigation";
+import CheckoutButton from "../Components/CheckoutPage";
+import { loadStripe } from '@stripe/stripe-js'
 interface CartItem {
   _id: string;
   imageUrl: string;
@@ -21,6 +23,7 @@ interface CartItem {
 }
 
 const Cart = () => {
+  const router = useRouter();  // ✅ Moved inside the component
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCheckoutComplete, setIsCheckoutComplete] = useState(false);
 
@@ -58,7 +61,7 @@ const Cart = () => {
 
   const { subtotal, discount, deliveryFee, total } = calculateTotal();
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     if (cartItems.length === 0) {
       alert("Your cart is empty. Please add items before checking out.");
       return;
@@ -66,6 +69,8 @@ const Cart = () => {
     localStorage.removeItem("cart");
     setCartItems([]);
     setIsCheckoutComplete(true);
+
+    router.push("/Components/CheckoutPage"); // ✅ Using router correctly inside component
   };
 
   return (
@@ -86,7 +91,9 @@ const Cart = () => {
                   <div className="text-center mt-10">
                     <p className="font-medium text-gray-600">Your cart is empty.</p>
                     <Link href="/">
-                      <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Continue Shopping</button>
+                      <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                        Continue Shopping
+                      </button>
                     </Link>
                   </div>
                 )}
@@ -116,7 +123,7 @@ const Cart = () => {
                 <div className="mt-8">
                   <div className="flex items-center justify-between pb-6">
                     <p className="text-lg">Subtotal</p>
-                    <p className="font-medium">${subtotal.toFixed(2)  }</p>
+                    <p className="font-medium">${subtotal.toFixed(2)}</p>
                   </div>
                   <div className="flex items-center justify-between pb-6">
                     <p className="text-lg">Discount</p>
@@ -132,12 +139,11 @@ const Cart = () => {
                     <p className="font-medium">${total.toFixed(2)}</p>
                   </div>
                 </div>
-                <Link href={'/AddressForm'}>
-                <button onClick={handleCheckout}  className="bg-indigo-500 text-white py-2 px-8 rounded hover:bg-indigo-600 w-full">
+                <button onClick={handleCheckout} className="bg-indigo-500 text-white py-2 px-8 rounded hover:bg-indigo-600 w-full">
                   CHECK OUT
-               
                 </button>
-                </Link>
+                <CheckoutButton/>
+               
                 {isCheckoutComplete && <p className="mt-4 text-green-600 font-bold text-center">Checkout complete! Thank you for your purchase.</p>}
               </div>
             </div>

@@ -46,7 +46,7 @@ const Slug = () => {
 
             fetchProduct();
         }
-    }, [slug]);
+    },[slug]);
 
     if (loading) return <div className="flex items-center justify-center min-h-screen">
         <div className="w-16 h-16 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
@@ -83,6 +83,7 @@ const Slug = () => {
                                 alt="ecommerce"
                                 className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                                 src={product.imageUrl}
+                                
                             />
                             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
 

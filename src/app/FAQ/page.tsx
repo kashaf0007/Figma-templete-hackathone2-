@@ -25,19 +25,14 @@ const FAQ = () => {
                All Reviews(451)
             </h1>
     
-            {/* <div className='flex items-center space-x-6'>
-
-            <GiSettingsKnobs className='font-semibold text-2xl' />
-            <Image src={"/latest.png"} alt={"product-img"} height={50} width={50}></Image>
-            <Image className='text-black' src={"/Write a Review.png"} alt={"product-img"} height={100} width={120}></Image>
-                    </div> */}
+           
                     </div>   
                      
 <hr></hr>
         <div className="text-center mt-12 mb-6">
         <h1 
           className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] text-center" >
-          FAQ'S
+          FAQS
         </h1>
       </div>
     <div className="container mx-auto p-4 md:p-6 lg:p-8">
@@ -73,7 +68,7 @@ const FAQ = () => {
         <details className="bg-gray-100 p-4 rounded">
           <summary className="text-lg font-bold">How do I reset my password?</summary>
           <p className="text-gray-600">
-            You can reset your password by clicking on the "Forgot Password" link on the login page.
+            You can reset your password by clicking on the Forgot Password link on the login page.
           </p>
         </details>
         <details className="bg-gray-100 p-4 rounded">
