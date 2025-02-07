@@ -1,5 +1,4 @@
 
-
 "use client";
 import { CardElement, useStripe, useElements, Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
@@ -96,7 +95,7 @@ const PaymentPage: React.FC = () => {
 
   useEffect(() => {
     async function fetchClientSecret() {
-      setIsLoading(true); // Set loading to true before fetching
+      setIsLoading(true); 
       try {
         const response = await fetch('/api/create-payment-intent', {
           method: 'POST',
@@ -107,9 +106,9 @@ const PaymentPage: React.FC = () => {
         setClientSecret(data.clientSecret);
       } catch (error) {
         console.error("Error fetching client secret:", error);
-        // Handle error, e.g., display an error message to the user
+      
       } finally {
-        setIsLoading(false); // Set loading to false after fetch, regardless of success/failure
+        setIsLoading(false); 
       }
     }
 
@@ -118,15 +117,15 @@ const PaymentPage: React.FC = () => {
 
   const handleSuccessfulCheckout = () => {
     setCheckoutSuccessful(true);
-    // ... other actions after successful checkout
+   
   };
 
   if (isLoading) {
-    return <div>Loading Payment...</div>; // Display loading message
+    return <div>Loading Payment...</div>;
   }
 
   if (!clientSecret) {
-    return <div>Error loading payment information.</div>; // Display error message
+    return <div>Error loading payment information.</div>;
   }
 
   return (

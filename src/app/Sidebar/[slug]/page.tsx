@@ -1,141 +1,169 @@
-
 "use client";
 
 import Footer from '@/app/Components/Footer';
 import Navbar from '@/app/Components/Navbar';
 import Product from '@/app/ProductDetail/page';
 import { client } from '@/sanity/lib/client';
-import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import React from 'react';
-import { FaCheck, FaStar } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { cartAtom } from '@/store';
+import { useAtom } from 'jotai';
 
-interface Product {
-    _id: string;
-    name: string;
-    description: string;
-    price: string;
-    imageUrl: string;
-    category: string;
-    discountPercent?: number;
-    isNew?: boolean;
-    sizes?: string[];
+// Define product interface
+interface ProductType {
+  _id: string;
+  name: string;
+  description: string;
+  price: number;
+  imageUrl: string;
+  category: string;
+  discountPercent?: number;
+  isNew?: boolean;
+  sizes?: string[];
+  colors?: string[];
 }
 
 const Slug = () => {
-    const { slug } = useParams();
+  const { slug } = useParams();
+  const [product, setProduct] = useState<ProductType | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [cartItems, setCartItems] = useAtom(cartAtom);
 
-    const [product, setProduct] = React.useState<Product | null>(null);
-    const [loading, setLoading] = React.useState(true);
-
-    const query = `*[_type == "products"]{_id, name, description, price, "imageUrl": image.asset->url, category, discountPercent, isNew, sizes,colors}`
-
-    React.useEffect(() => {
-        if (slug) {
-            const fetchProduct = async () => {
-                const productData = await client.fetch(query);
-                const index = productData.findIndex((item: { _id: string }) => item._id == slug);
-
-                if (productData.length > 0) {
-                    setProduct(productData[index]);
-                } else {
-                    setProduct(null);
-                }
-                setLoading(false);
-            };
-
-            fetchProduct();
-        }
-    },[slug]);
-
-    if (loading) return <div className="flex items-center justify-center min-h-screen">
-        <div className="w-16 h-16 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
-    </div>;
-
-    const handleAddToCart = () => {
-        console.log("Add to cart runs");
-
-        if (!product) return;
-        const existingItem = JSON.parse(localStorage.getItem("cart") || "[]");
-        console.log('Existing Item', existingItem);
-
-        const isProduct = existingItem.find((item: { _id: string }) => item._id == product._id);
-        console.log("Is Product", isProduct);
-
-        let updatedCart;
-        if (isProduct) {
-            updatedCart = existingItem.map((item: { _id: string }) => item._id == product._id ? { ...item } : item);
-
-        } else {
-            updatedCart = [...existingItem, product];
-        }
-        localStorage.setItem("cart", JSON.stringify(updatedCart));
+  useEffect(() => {
+    if (slug) {
+      const fetchProduct = async () => {
+        // Fetch product data with image URL from Sanity
+        const productData = await client.fetch(`
+          *[_type == "products" && _id == "${slug}"] {
+            _id,
+            name,
+            description,
+            price,
+            "imageUrl": image.asset->url, // Fetch the image URL directly
+            category,
+            discountPercent,
+            isNew,
+            sizes,
+            colors
+          }
+        `);
+        setProduct(productData[0] || null);
+        setLoading(false);
+      };
+      fetchProduct();
     }
+  }, [slug]);
 
+  if (loading)
     return (
-        <div>
-            <Navbar />
-            <div>
-                {product && <section className="text-gray-600 body-font overflow-hidden">
-                    <div className="container px-5 py-24 mx-auto">
-                        <div className="lg:w-4/5 mx-auto flex flex-wrap">
-                            <img
-                                alt="ecommerce"
-                                className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-                                src={product.imageUrl}
-                                
-                            />
-                            <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-
-                                <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{product.name}</h1>
-                                   <div className="flex items-center mb-3">
-                                                          <h2 className="text-gray-900 text-lg title-font font-medium flex">
-                                                              <FaStar className="text-yellow-500 mb-4 " />
-                                                              <FaStar className="text-yellow-500 mb-4" />
-                                                               <FaStar className="text-yellow-500 mb-4" />
-                                                               <FaStar className="text-yellow-500 mb-4" />
-                                                               <FaStar className="text-yellow-500 mb-4" />
-                                                          </h2>
-                                                         
-                                                        </div>
-                                <p className="leading-relaxed">{product.description}</p>
-                                <hr className='ml-28px text-black'></hr>
-                                   <div className=' mt-5 mb-3 '>
-                                                            <h2 className='text-gray-500'>Select Colors</h2>
-                                                            <div className='flex space-x-4 mt-2'>
-                                                            <div className='w-[35px] h-[35px] bg-[#4f4631] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity-5 hover:opacity-100 cursor-pointer '/></div>
-                                                            <div className='w-[35px] h-[35px] bg-[#314f4a] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity-5 hover:opacity-100 cursor-pointer '/></div>
-                                                            <div className='w-[35px] h-[35px] bg-[#31344f] rounded-full  flex justify-center items-center'><FaCheck className='text-white opacity-5 hover:opacity-100 cursor-pointer '/></div>
-                                                        </div>
-                                                        </div>
-                              <hr></hr>
-                              <div className='mt-4'>
-                            <p className='text-gray-500'>Choose Size</p>
-                            <div className='flex space-x-3 text-gray-500 mt-2'>
-                            <div className='w-[70px] h-[40px] flex justify-center items-center bg-gray-200 rounded-[62px] text-black'>Small</div>
-                            <div className='w-[70px] h-[40px] flex justify-center items-center bg-gray-200 rounded-[62px] text-black'>Medium</div>
-                            <div className='w-[70px] h-[40px] flex justify-center items-center bg-gray-200 rounded-[62px] text-black'>Large</div>
-                            <div className='w-[70px] h-[40px] flex justify-center items-center bg-gray-200 rounded-[62px] text-black'>X-Large</div>
-                            </div>
-                          </div>
-                                <div className="flex mt-6 items-center pb-5 border-b-2 justify-between border-gray-100 mb-5">
-                                    <span className="title-font font-medium text-2xl text-gray-900">${product.price}</span>
-                                    <Link href={'/Cart'}>
-                                        <button className="flex ml-auto w-60 text-white bg-black border-2 py-2 px-6 focus:outline-none hover:bg-black rounded active:scale-95" onClick={handleAddToCart}>
-                                            Add to Cart
-                                        </button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-<Product/>
-
-                    </div>
-                </section>}
-            </div>
-            <Footer/>
-        </div>
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="w-16 h-16 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
+      </div>
     );
+
+  const handleAddToCart = () => {
+    if (!product) return;
+
+    const existingItem = cartItems.find((item) => item._id === product._id);
+    let updatedCart;
+
+    if (!existingItem) {
+      const newCartItem: any = {
+        ...product,
+        quantity: 1, // Default quantity
+      };
+      updatedCart = [...cartItems, newCartItem];
+      setCartItems(updatedCart);
+      toast.success("Product added to cart!");
+    } else {
+      toast.info("Product is already in the cart.");
+    }
+  };
+
+  return (
+    <div>
+      <Navbar />
+      <ToastContainer position="top-right" autoClose={2000} />
+      {product && (
+        <section className="text-gray-600 body-font overflow-hidden">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="lg:w-4/5 mx-auto flex flex-wrap items-center">
+              <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+                <img
+                  alt="ecommerce"
+                  className="lg:w-full w-full lg:h-auto h-64 object-cover object-center rounded-md shadow-lg"
+                  src={product?.imageUrl || ''}
+                />
+              </div>
+              <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h1 className="text-gray-900 text-3xl title-font font-medium mb-3">
+                  {product.name}
+                </h1>
+                <p className="leading-relaxed mb-4">{product.description}</p>
+                <div className="flex items-center mb-4">
+                  <span className="title-font font-medium text-2xl text-gray-900">
+                    ${product.price}
+                  </span>
+                  {product.discountPercent && (
+                    <span className="ml-4 text-sm text-red-500 line-through">
+                      ${Math.round(product.price * (1 + product.discountPercent / 100))}
+                    </span>
+                  )}
+                </div>
+
+                {/* Sizes */}
+                {product.sizes && product.sizes.length > 0 && (
+                  <div className="mb-4">
+                    <h3 className="text-gray-700 font-medium">Available Sizes:</h3>
+                    <div className="flex flex-wrap mt-2">
+                      {product.sizes.map((size, index) => (
+                        <span
+                          key={index}
+                          className="inline-block bg-gray-200 text-gray-700 px-4 py-2 m-1 rounded-md cursor-pointer hover:bg-gray-300"
+                        >
+                          {size}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Colors */}
+                {product.colors && product.colors.length > 0 && (
+                  <div className="mb-6">
+                    <h3 className="text-gray-700 font-medium">Available Colors:</h3>
+                    <div className="flex mt-2">
+                      {product.colors.map((color, index) => (
+                        <div
+                          key={index}
+                          className="w-8 h-8 m-1 rounded-full"
+                          style={{
+                            backgroundColor: color,
+                          }}
+                        ></div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+<button
+  className="w-full max-w-xs py-3 px-6 bg-black text-white font-semibold text-lg rounded-md transition-transform duration-300 ease-in-out transform hover:bg-gray-800 hover:scale-105 hover:shadow-lg focus:outline-none active:scale-95"
+  onClick={handleAddToCart}
+>
+  Add to Cart
+</button>
+
+              </div>
+            </div>
+            <Product />
+          </div>
+        </section>
+      )}
+      <Footer />
+    </div>
+  );
 };
 
 export default Slug;

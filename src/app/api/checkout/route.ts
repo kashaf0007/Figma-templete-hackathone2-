@@ -1,5 +1,6 @@
 
 export const dynamic = "force-dynamic";
+import { saveOrderToSanity } from "@/utils/page";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
@@ -7,7 +8,12 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function POST(req: NextRequest) {
   try {
-    const { cart } = await req.json();
+    const { cart , billingDetails } = await req.json();
+    
+    const getTotalPrice = () => {
+      return cart.reduce((total:any, item:any) => total + item.price * item.quantity, 0);
+    };
+    
 
     if (!cart || !Array.isArray(cart) || cart.length === 0) {
       return NextResponse.json({ error: "Cart is empty" }, { status: 400 });
@@ -32,6 +38,8 @@ export async function POST(req: NextRequest) {
       success_url: `http://localhost:3000/Success`,
       cancel_url: `http://localhost:3000/Cancel/CancelPage`,
     });
+
+    await saveOrderToSanity(billingDetails, cart, getTotalPrice());
 
     return NextResponse.json({ id: session.id });
   } catch (error:any) {
